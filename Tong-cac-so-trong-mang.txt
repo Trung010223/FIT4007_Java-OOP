@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Nhập kích thước của mảng
+        System.out.print("Nhập kích thước của mảng: ");
+        int size = scanner.nextInt();
+
+        // Khai báo mảng
+        int[] array = new int[size];
+
+        // Nhập các phần tử của mảng
+        System.out.println("Nhập các phần tử của mảng:");
+        for (int i = 0; i < size; i++) {
+            System.out.print("Phần tử thứ " + (i + 1) + ": ");
+            array[i] = scanner.nextInt();
+        }
+
+        // Tính tổng các số trong mảng
+        int sum = 0;
+        for (int value : array) {
+            sum += value; // Cộng dồn từng phần tử vào biến sum
+        }
+
+        // In ra tổng
+        System.out.println("Tổng các số trong mảng là: " + sum);
+
+        scanner.close(); // Đóng scanner khi không còn sử dụng
+    }
+}
